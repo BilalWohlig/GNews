@@ -139,8 +139,7 @@ if (process.env.gNewsCron) {
                 }
             }
             if (allNews.length > 0) {
-                // await News.insertMany(allNews)
-                console.log("Doneeee", allNews.length)
+                await News.insertMany(allNews)
             }
 
             console.log("Gnews cron ended")
