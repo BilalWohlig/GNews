@@ -37,5 +37,5 @@ export default {
         } catch (error) {
             return null
         }
-    },
+    }
 }
