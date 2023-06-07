@@ -7,7 +7,7 @@
 
 if (process.env.gNewsCron) {
     console.log("GNEWS CRONS ARE ACTIVE")
-    cron.schedule("1 */1 * * *", async () => {
+    cron.schedule("0,20,40 * * * *", async () => {
         console.log(
             "Fetching News Every 20 Minutes",
             new Date().toLocaleString()
@@ -89,7 +89,7 @@ if (process.env.gNewsCron) {
                                             flag = true
                                         }
                                     }
-                                    if (!flag) {
+                                    if (!flag && !sameArticle.reviewed) {
                                         sameArticle.categories.push(
                                             category._id
                                         )
